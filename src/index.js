@@ -1,3 +1,4 @@
 module.exports = function towelSort (matrix) {
-    return matrix.join().split(',').sort((a, b) => a - b);
+    let strArr = matrix.join().split(',').sort((a, b) => a - b);
+    return strArr.map(Number);
 }
