@@ -1,8 +1,3 @@
 module.exports = function towelSort (matrix) {
-  if (matrix) {
-      let newArr = matrix.join().split(',');
-      newArr.sort(function(a,b){ 
-          return a — b
-        })
-  }
+    return matrix.join().split(',').sort((a, b) => a - b);
 }
