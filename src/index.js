@@ -1,4 +1,14 @@
 module.exports = function towelSort (matrix) {
-    let strArr = matrix.join().split(',').sort((a, b) => a - b);
-    return strArr.map(Number);
+    if ( matrix ) {
+        let newArr = [];
+        for(let i = 0; i < matrix.length; i++) {
+            if (i % 2 === 0) {
+                newArr=newArr.concat(matrix[i])
+            }
+        else {
+            newArr=newArr.concat(matrix[i].reverse())
+        }
+    }
+    return newArr;
+    }
 }
